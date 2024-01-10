@@ -10,7 +10,7 @@ public class ArrayListNotes
 {
     public static void main(String[] args)
     {
-        ArrayList<Double> myList;
+        ArrayList<Double> myList; 
     }
     
     /**
