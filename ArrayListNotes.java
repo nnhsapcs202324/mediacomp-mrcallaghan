@@ -12,7 +12,7 @@ public class ArrayListNotes
     {
         /*
          * The ArrayList is a Java Generic.
-         * 
+         *  
          * We have to specify the class type of the elements in the list in angle brackets (i.e. <>)
          *  after every ArrayList identifer.
          *  
