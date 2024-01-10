@@ -10,7 +10,17 @@ public class ArrayListNotes
 {
     public static void main(String[] args)
     {
-        System.out.println("Hello, world.");
+        /*
+         * The ArrayList is a Java Generic.
+         * 
+         * We have to specify the class type of the elements in the list in angle brackets (i.e. <>)
+         *  after every ArrayList identifer.
+         *  
+         *  Primitives (e.g., int, double, boolean) are not classes and cannot be specified
+         *      as the type of the element in a generic. Instead, we can use the corresponding Wrapper
+         *      classes (e.g., Integer, Double, Boolean).
+         */
+        ArrayList<Double> myList;
     }
     
     /**
