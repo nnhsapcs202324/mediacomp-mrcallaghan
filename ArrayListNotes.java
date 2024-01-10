@@ -3,14 +3,17 @@ import java.util.ArrayList;
 /**
  * Write a description of class ArrayListNotes here.
  *
- * @author gcschmit
- * @version 
+ * @author mrcallaghan
+ * @version 10jan2024
  */
 public class ArrayListNotes
 {
     public static void main(String[] args)
     {
-        
+        System.out.println("Hello, world."); // comment
+        /*
+         * 
+         */
     }
     
     /**
