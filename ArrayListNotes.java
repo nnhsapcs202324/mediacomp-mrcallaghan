@@ -10,7 +10,21 @@ public class ArrayListNotes
 {
     public static void main(String[] args)
     {
+        
+        /*
+         * The ArrayList is a Java Generic.
+         * 
+         * We have to specify the class type of the elements in the list in angle brackets
+         *      (i.e., <>) after every ArrayList identifier.
+         *      
+         * Primitives (e.g., int, double, boolean) are not classes and cannot be specifed
+         *      as the type of the element in a generic.  Instead, we can use the corresponding
+         *      Wrapper classes (e.g., Integer, Double, Boolean).
+         */
         ArrayList<Double> myList; 
+        myList = createRandomDoubleList(10, 20);
+        System.out.println(myList);
+        
     }
     
     /**
@@ -25,7 +39,23 @@ public class ArrayListNotes
      */
     public static ArrayList<Double> createRandomDoubleList(int size, int range)
     {
-        return null;
+        ArrayList<Double> list = new ArrayList<Double>();
+        
+        for(int i = 0; i < size; i++)
+        {
+            double value = Math.random() * range;
+            
+            /*
+             * The add method adds the specified object to the end of the list.
+             * 
+             * Autoboxing:
+             *  Primitive values are automatically onverted the thier corresponding Wrapper class.
+             *          However, type promotion does not occur.
+             */
+            list.add(value);
+        }
+        
+        return list;
     }
          
     
