@@ -21,6 +21,8 @@ public class ArrayListNotes
          *      classes (e.g., Integer, Double, Boolean).
          */
         ArrayList<Double> myList;
+        myList = createRandomDoubleList(10,20);
+        System.out.println(myList);
     }
     
     /**
@@ -35,7 +37,22 @@ public class ArrayListNotes
      */
     public static ArrayList<Double> createRandomDoubleList(int size, int range)
     {
-        return null;
+        ArrayList<Double> list = new ArrayList<Double>();
+        
+        for(int i = 0; i < size; i++)
+        {
+            double value = Math.random() * range;
+            
+            /*
+             * The add method adds the specified object to the end of the list.
+             * 
+             * Autoboxing:
+             *  Primitive values are automatically converted to their corresponding
+             *      wrapper class.  However, type promotion does not occur.
+             */
+            list.add(value);
+        }
+        return list;
     }
          
     
