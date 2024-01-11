@@ -24,6 +24,8 @@ public class ArrayListNotes
         ArrayList<Double> myList; 
         myList = createRandomDoubleList(10, 20);
         System.out.println(myList);
+        removeLessThan(myList, 10.0);
+        System.out.println(myList);
         
     }
     
@@ -66,12 +68,37 @@ public class ArrayListNotes
      */
     public static void removeLessThan(ArrayList<Double> list, double limit)
     {
+        /*
+         * The size method returns the number of elements in an ArrayList.
+         */
+        for(int i = 0; i < list.size(); i++)
+        {
+            /*
+             * The get method returns the value of the element at the specified index.
+             */
+            double value = list.get(i);
+            if(value < limit)
+            {
+                /*
+                 * The remove method deletes the element at the specified index from the list.
+                 *  All subsequent elements are shifted left in the ArrayList and the size decreases.
+                 */
+                list.remove(i);
+                i--;
+            }
+        }
         
     }
     
     public static void removeLessThanAlt(ArrayList<Double> list, double limit)
     {
-        
+        for(int i = list.size() - 1; i >= 0; i--)
+        {
+            if(list.get(i) < limit)
+            {
+                list.remove(i);
+            }
+        }
     }
     
     public static double sumList(ArrayList<Double> list)
