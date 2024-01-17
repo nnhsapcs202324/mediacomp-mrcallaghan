@@ -25,6 +25,7 @@ public class ArrayListNotes
          System.out.println(myList);
          removeLessThan(myList, 10.0);
          System.out.println(myList);
+         System.out.println(sumList(myList));
     }
     
     /**
@@ -105,6 +106,22 @@ public class ArrayListNotes
     {
         int sum = 0;
         
+        /*
+         * Enhanced for loops support iterating through ArrayLists.
+         * 
+         * Java will automatically "unbox" wrapper class objects (e.g., Integer)
+         *      and assign to variables of primitve types (e.g., integer).
+         */
+        for (double value : list)
+        {
+            sum += value;
+            
+            /*
+             * Modifying the list (e.g. add, remove) inside the enhaced for loop generates a
+             *  ConcurrentModificationException.
+             */
+            //list.add(7.0);
+        }
         
         
         return sum;
